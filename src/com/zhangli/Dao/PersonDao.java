@@ -16,9 +16,7 @@ public class PersonDao {
 	public PersonDao(Context context) {
 		person = new PersonSQlite(context);
 	}
-	public void fun(){
-		
-	}
+
 	// Ìí¼Ó
 	public void add(String name, String number) {
 		SQLiteDatabase db = person.getWritableDatabase();
