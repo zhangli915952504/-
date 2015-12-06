@@ -28,6 +28,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+       
+        
+           			 <!-- authorities:主机名 -->
+        <provider   android:name="com.zhangli.db.PersonDBProvider"
+            		android:authorities="com.zhangli.db.personprovider"></provider>
+            
     </application>
 
 </manifest>

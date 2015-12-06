@@ -2,6 +2,7 @@ package com.zhangli.Test;
 
 import java.util.List;
 
+
 import com.zhangli.Dao.Persondao2;
 import com.zhangli.db.Person;
 import com.zhangli.shujuku.PersonSQlite;
@@ -17,26 +18,33 @@ public class Test extends AndroidTestCase{
 	//Ìí¼Ó
 	public void TestAdd() throws Exception{
 		Persondao2 dao=new Persondao2(getContext());
-		dao.add("ligang", "159");
+//		dao.add("", "159");
+		
+		long number=88888l;
+		for(int i=0;i<50;i++){
+			dao.add("¿ñ±¼µÄµÚ"+i+"ÄÌÅ£",Long.toString(number+i));
+		}
 	}
 	
 	//²éÕÒ
 	public void TestFind() throws Exception{
 		Persondao2 dao=new Persondao2(getContext());
-		boolean result=dao.find("ligang");
+		boolean result=dao.find("¿ñ±¼µÄÄÌÅ£");
 		assertEquals(true, result);
 	}
 	
 	//¸ü¸Ä
 	public void TestUpdate() throws Exception{
 		Persondao2 dao=new Persondao2(getContext());
-		dao.update("ligang","321");
+		dao.update("¿ñ±¼µÄÄÌÅ£","321");
 	}
 	
 	//É¾³ý
 	public void TestDelete() throws Exception{
 		Persondao2 dao=new Persondao2(getContext());
-		dao.delete("ligang");
+		for(int i=0;i<50;i++){
+			dao.delete("¿ñ±¼µÄÄÌÅ£"+i);
+		}
 	}
 	
 	//²éÕÒÈ«²¿
